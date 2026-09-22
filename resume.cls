@@ -29,6 +29,7 @@
 \usepackage{etoolbox}
 \usepackage{textcomp} % Provides an explicit extractable vertical bar
 \usepackage{enumitem} % Consistent, ATS-friendly list spacing and bullets
+\usepackage[none]{hyphenat} % Prevent extracted text from containing line-break hyphens
 \pagestyle{empty} % Suppress page numbers
 
 %----------------------------------------------------------------------------------------
