@@ -2,7 +2,7 @@
 
 # ATS-Optimized Latex Resume
 
-The main resumesource file to edit is
+The main resume source file to edit is
 [`resume.tex`](resume.tex). Follow the instructions below to view your edits in vscode. The custom document class is in
 [`resume.cls`](resume.cls).
 
