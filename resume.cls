@@ -27,6 +27,7 @@
 \usepackage{array} % Required for boldface (\bf and \bfseries) tabular columns
 \usepackage{ifthen} % Required for ifthenelse statements
 \usepackage{etoolbox}
+\usepackage{textcomp} % Provides an explicit extractable vertical bar
 \usepackage{enumitem} % Consistent, ATS-friendly list spacing and bullets
 \pagestyle{empty} % Suppress page numbers
 
@@ -118,8 +119,7 @@
 %	WORK EXPERIENCE FORMATTING
 %----------------------------------------------------------------------------------------
 
-% Free the article class's accent command so `r` can be used as an
-% environment name.
+% Free the article class's accent command so `r` can be used as an env name.
 \let\r\@undefined
 \let\endr\@undefined
 

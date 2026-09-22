@@ -20,8 +20,7 @@ This is a local LaTeX version of the resume. The source is in
    VS Code tab. You can also run **LaTeX Workshop: Build LaTeX project** from
    the Command Palette.
 
-The generated PDF and intermediate files are written to `build/`, so the
-working directory stays clean.
+The generated PDF and intermediate files are written to `build/`.
 
 ## Command-line build
 
