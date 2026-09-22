@@ -6,7 +6,7 @@ The main resume source file to edit is
 [`resume.tex`](resume.tex). Follow the instructions below to view your edits in vscode. The custom document class is in
 [`resume.cls`](resume.cls).
 
-## VS Code setup
+## VS Code setup (Recommended)
 
 1. Install a LaTeX distribution that includes `pdflatex` and `latexmk`.
    On Ubuntu/WSL:
