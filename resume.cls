@@ -27,6 +27,7 @@
 \usepackage{array} % Required for boldface (\bf and \bfseries) tabular columns
 \usepackage{ifthen} % Required for ifthenelse statements
 \usepackage{etoolbox}
+\usepackage{enumitem} % Consistent, ATS-friendly list spacing and bullets
 \pagestyle{empty} % Suppress page numbers
 
 %----------------------------------------------------------------------------------------
@@ -48,28 +49,28 @@
   \@ifundefined{@addresstwo}{
     \def \@addresstwo {#1}
   }{
-  \@ifundefined{@addressthree}{
-  \def \@addressthree {#1}
-  }{
-     \def \@addressone {#1}
-  }}
+    \@ifundefined{@addressthree}{
+      \def \@addressthree {#1}
+    }{
+      \def \@addressone {#1}
+    }}
 }
 
 % \printaddress is used to style an address line (given as input)
 \def \printaddress #1{
-  \begingroup
-    \def \\ {\addressSep\ }
-    \centerline{#1}
-  \endgroup
-  \par
-  \addressskip
+\begingroup
+\def \\ {\addressSep\ }
+\centerline{#1}
+\endgroup
+\par
+\addressskip
 }
 
 % \printname is used to print the name as a page header
 \def \printname {
   \begingroup
-    \hfil{\MakeUppercase{\namesize\bf \@name}}\hfil
-    \nameskip\break
+  \hfil{\MakeUppercase{\namesize\bf \@name}}\hfil
+  \nameskip\break
   \endgroup
 }
 
@@ -85,7 +86,7 @@
     \printaddress{\@addressone}}
   \@ifundefined{@addresstwo}{}{ % Print the second address if specified
     \printaddress{\@addresstwo}}
-     \@ifundefined{@addressthree}{}{ % Print the third address if specified
+  \@ifundefined{@addressthree}{}{ % Print the third address if specified
     \printaddress{\@addressthree}}
 }
 
@@ -95,26 +96,22 @@
 
 % Defines the rSection environment for the large sections within the CV
 \newenvironment{rSection}[1]{ % 1 input argument - section name
-  % \sectionskip
-  \MakeUppercase{\bf #1} % Section title
-  \sectionlineskip
-  \hrule % Horizontal line
-  \begin{list}{}{ % List for each individual item in the section
-    \setlength{\leftmargin}{1.5em} % Margin within the section
-  }
-  \item[]
+  \par\sectionskip
+  \noindent\MakeUppercase{\bfseries #1}\par % Section title
+  \vspace{0.15em}\hrule
+  \vspace{0.35em}
+  \ignorespaces
 }{
-  \end{list}
+  \par\medskip
 }
 
 % Defines the rSubSection environment for grouped, horizontal skills.
 \newenvironment{rSubSection}[1]{
-  \sectionskip
-  \MakeUppercase{\bfseries #1}\par
-  \begin{center}
-  \bfseries
+  \par\smallskip
+  \noindent\textbf{\MakeUppercase{#1}:}\hspace{0.5em}
+  \ignorespaces
 }{
-  \end{center}
+  \par
 }
 
 %----------------------------------------------------------------------------------------
@@ -127,16 +124,16 @@
 \let\endr\@undefined
 
 \newenvironment{r}[4]{ % 4 input arguments - company name, year(s) employed, job title and location
- {\bf #1} \hfill {#2} % Bold company name and date on the right
- \ifthenelse{\equal{#3}{}}{}{ % If the third argument is not specified, don't print the job title and location line
-  \\
-  {\em #3} \hfill {\em #4} % Italic job title and location
-  }\smallskip
-  \begin{list}{$\cdot$}{\leftmargin=0em} % \cdot used for bullets, no indentation
-   \itemsep -0.5em \vspace{-0.5em} % Compress items in list together for aesthetics
+{\bf #1} \hfill {#2} % Bold company name and date on the right
+\ifthenelse{\equal{#3}{}}{}{ % If the third argument is not specified, don't print the job title and location line
+\\
+{\em #3} \hfill {\em #4} % Italic job title and location
+}\smallskip
+\begin{list}{$\cdot$}{\leftmargin=0em} % \cdot used for bullets, no indentation
+  \itemsep -0.5em \vspace{-0.5em} % Compress items in list together for aesthetics
   }{
-  \end{list}
-  \vspace{0.5em} % Some space after the list of bullet points
+\end{list}
+\vspace{0.5em} % Some space after the list of bullet points
 }
 
 % The below commands define the whitespace after certain things in the document - they can be \smallskip, \medskip or \bigskip
@@ -145,3 +142,7 @@
 \def\sectionlineskip{\medskip} % The space above the horizontal line for each section 
 \def\nameskip{\bigskip} % The space after your name at the top
 \def\sectionskip{\medskip} % The space after the heading section
+
+% Keep bullet lists compact while retaining a standard text bullet for extraction.
+\setlist[itemize]{label={-},leftmargin=1.5em,itemsep=0.15em,topsep=0.2em,parsep=0pt,partopsep=0pt}
+\emergencystretch=3em

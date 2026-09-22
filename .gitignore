@@ -1,5 +1,5 @@
 # LaTeX build artifacts
-# build/
+build/
 *.aux
 *.fdb_latexmk
 *.fls
