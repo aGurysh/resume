@@ -1,7 +1,9 @@
-# Resume
+# If you are looking for **_my_** resume, click [here](build/resume.pdf) (Click download raw file).
 
-This is a local LaTeX version of the resume. The source is in
-[`resume.tex`](resume.tex), and the custom document class is in
+# ATS-Optimized Latex Resume
+
+The main resumesource file to edit is
+[`resume.tex`](resume.tex). Follow the instructions below to view your edits in vscode. The custom document class is in
 [`resume.cls`](resume.cls).
 
 ## VS Code setup
