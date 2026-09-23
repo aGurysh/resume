@@ -2,11 +2,11 @@
 
 <img width="611" height="791" alt="image" src="https://github.com/user-attachments/assets/cae41ce8-8065-4e05-888c-061224d014b6" />
 
+# ATS-Optimized LaTex Resume Template
 
-# ATS-Optimized Latex Resume Template
-
-The main resume source file to edit is [`resume.tex`](resume.tex). Follow the instructions below to view your edits in vscode. 
+The main resume source file to edit is [`resume.tex`](resume.tex). Follow the instructions below to view your edits in vscode.
 The custom document class is in [`resume.cls`](resume.cls).
+
 ## VS Code setup (Recommended)
 
 1. Install a LaTeX distribution that includes `pdflatex` and `latexmk`.
