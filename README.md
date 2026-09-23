@@ -1,4 +1,4 @@
-# If you are looking for **_my_** resume, click [here](build/resume.pdf) (Click download raw file).
+# If you are looking for **_my_** resume, click [here](build/test-resume.pdf) (Click download raw file).
 
 # ATS-Optimized Latex Resume
 
