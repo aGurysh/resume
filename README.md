@@ -1,6 +1,9 @@
-# If you are looking for **_my_** resume, click [here](build/test-resume.pdf) (Click download raw file).
+# A pdf of my resume (shown below) can be downloading by clicking [here](build/test-resume.pdf) and using the "Download Raw File" option.
 
-# ATS-Optimized Latex Resume
+<img width="611" height="791" alt="image" src="https://github.com/user-attachments/assets/cae41ce8-8065-4e05-888c-061224d014b6" />
+
+
+# ATS-Optimized Latex Resume Template
 
 The main resume source file to edit is
 [`resume.tex`](resume.tex). Follow the instructions below to view your edits in vscode. The custom document class is in
