@@ -1,4 +1,4 @@
-### A pdf of my resume (shown below) can be downloaded by clicking [here](build/test-resume.pdf) and using the "Download raw file" option.
+### A pdf of my resume (shown below) can be downloaded by clicking [here](build/resume.pdf) and using the "Download raw file" option.
 
 <img width="611" height="791" alt="image" src="https://github.com/user-attachments/assets/cae41ce8-8065-4e05-888c-061224d014b6" />
 
