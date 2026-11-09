@@ -19,13 +19,11 @@ The custom document class is in [`resume.cls`](resume.cls).
 
 2. Open this folder in VS Code. Install the recommended **LaTeX Workshop**
    extension when prompted.
-3. Open `resume.tex`. LaTeX Workshop will build on save and open the PDF in a
-   VS Code tab. You can also run **LaTeX Workshop: Build LaTeX project** from
-   the Command Palette.
+3. Open `resume.tex`. LaTeX Workshop will build on save and continually update the PDF in a VS Code tab.
 
 The generated PDF and intermediate files are written to `build/`.
 
-## Command-line build
+## Command-line build ()
 
 After installing the LaTeX tools, run:
 

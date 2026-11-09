@@ -108,9 +108,13 @@
 }
 
 % Defines the rSubSection environment for grouped, horizontal skills.
+\newlength{\skilllabelwidth}
+\settowidth{\skilllabelwidth}{\textbf{Platform \& Tools:}\hspace{0.5em}}
 \newenvironment{rSubSection}[1]{
   \par\smallskip
-  \noindent\textbf{\MakeUppercase{#1}:}\hspace{0.5em}
+  \hangindent=\skilllabelwidth
+  \hangafter=1
+  \noindent\makebox[\skilllabelwidth][l]{\textbf{#1:}}%
   \ignorespaces
 }{
   \par
